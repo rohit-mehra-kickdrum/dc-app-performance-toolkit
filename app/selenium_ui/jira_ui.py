@@ -6,6 +6,9 @@ from extension.jira import extension_ui  # noqa F401
 def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
     modules.login(jira_webdriver, jira_datasets)
 
+def test_1_selenium_custom_action(jira_webdriver, jira_datasets, jira_screen_shots):
+    extension_ui.app_specific_action(jira_webdriver, jira_datasets)
+
 
 def test_1_selenium_browse_projects_list(jira_webdriver, jira_datasets, jira_screen_shots):
     modules.browse_projects_list(jira_webdriver, jira_datasets)
